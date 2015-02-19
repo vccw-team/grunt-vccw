@@ -1,0 +1,3 @@
+[submodule "root"]
+	path = root
+	url = git@github.com:vccw-team/vccw.git
