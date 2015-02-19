@@ -1,0 +1,63 @@
+# encoding: utf-8
+# vim: ft=ruby expandtab shiftwidth=2 tabstop=2
+
+#
+# Network Settings
+#
+hostname: {%= hostname %}
+ip: {%= ip %}
+
+#
+# WordPress Settings
+#
+version: {%= wp_version %}
+lang: {%= wp_lang %}
+
+title: Welcome to the VCCW
+multisite: false
+rewrite_structure: /archives/%post_id%
+
+#
+# WordPress Path
+#
+document_root: '/var/www/wordpress'
+wp_home: ''     # Path to the WP_HOME like "wp"
+wp_siteurl: ''  # Path to the WP_SITEURL like "wp"
+
+#
+# WordPress User
+#
+admin_user: admin
+admin_pass: admin
+
+#
+# WordPress Database
+#
+db_prefix: wp_
+db_host: localhost
+
+#
+# WordPress Default Plugins
+# Plugin's slug or url to the plugin's slug.
+#
+plugins:
+  - dynamic-hostname
+  - wp-total-hacks
+  - tinymce-templates
+
+#
+# WordPress Default Theme
+# Theme's slug or url to the theme's .zip.
+#
+theme: ''
+
+#
+# WordPress Options
+#
+options:
+  blogdescription: Hello VCCW.
+
+#
+# Theme unit testing
+#
+theme_unit_test: false
