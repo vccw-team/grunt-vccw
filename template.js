@@ -28,6 +28,8 @@ exports.template = function( grunt, init, done ) {
     ], function( err, props ) {
         props.keywords = [];
         props.version = '0.1.0';
+        var files = init.filesToCopy(props);
+        init.copyAndProcess(files, props);
         // Done!
         done();
     });
