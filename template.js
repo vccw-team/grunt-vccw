@@ -13,10 +13,23 @@ exports.notes = '';
 exports.after = '';
 exports.warnOn = '*';
 
+var path = require('path');
+var path_name = path.basename(process.cwd());
+
 // The actual init template
 exports.template = function( grunt, init, done ) {
     init.process( {}, [
-        init.prompt( 'hostname', 'vccw.dev' ),
+        {
+          hostname: 'hostname',
+          message: 'hostname',
+          default: function(value, data, done) {
+            if (path_name.match(/\.[a-z]*$/)) {
+                done(null, path_name);
+            } else {
+                done(null, 'vccw.dev');
+            }
+          }
+        },
         init.prompt( 'ip', '192.168.55.10' ),
         init.prompt( 'wp_lang', 'en_US' ),
         init.prompt( 'wp_version', 'latest' )
