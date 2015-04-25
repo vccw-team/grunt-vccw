@@ -20,7 +20,7 @@ var path_name = path.basename(process.cwd());
 exports.template = function( grunt, init, done ) {
     init.process( {}, [
         {
-          hostname: 'hostname',
+          name: 'hostname',
           message: 'hostname',
           default: function(value, data, done) {
             if (path_name.match(/\.[a-z]*$/)) {
