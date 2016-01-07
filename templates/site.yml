@@ -12,3 +12,34 @@ ip: {%= ip %}
 #
 version: {%= wp_version %}
 lang: {%= wp_lang %}
+title: Welcome to the VCCW
+multisite: false
+rewrite_structure: /archives/%post_id%
+
+#
+# WordPress Default Plugins
+# Plugin's slug or url to the plugin's slug.
+#
+plugins:
+  - dynamic-hostname
+  - wp-total-hacks
+  - tinymce-templates
+
+#
+# WordPress Default Theme
+# Theme's slug or url to the theme's .zip.
+#
+theme: ''
+
+#
+# WordPress Options
+#
+options:
+  blogdescription: Hello VCCW.
+
+#
+# Theme unit testing
+#
+theme_unit_test: false
+theme_unit_test_uri: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
+# theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-date-ja.xml
